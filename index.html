@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="icon" href="Logo.png" type="image/gif" sizes="16x16">
+    <!-- <script src="index.js"></script> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+        </style>
+</head>
+<body>
+    <img src="Logo.png" width="150px" style="padding-left: 2rem; padding-top: 1rem;">
+    <div class="container">
+        <h1>Java Script Ludo</h1>
+
+        <div class="dice">
+            <p style="padding: 1rem;"><b> Player 1</b></p>
+            <img src="images/dice1.png" alt="" id="check1">
+        </div>
+
+        <div class="dice" >
+            <p style="padding: 1rem;"><b> Player 2</b></p>
+            <img src="images/dice6.png" alt="" id="check2">
+        </div>
+
+        <audio src="http://cd.textfiles.com/hotgames/PROGRAMS/YACTC2/DICE.WAV"></audio>
+        <div class="btn">
+         <button onclick="ludogame()"> Booom</button>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+
+<script >
+ 
+// function ludogame()
+// {                we will use fatarrow function
+
+// }
+
+ludogame=()=>{
+    
+
+    
+
+// Dice 1
+//with the help of const the value can't be redeclare
+const play1= Math.floor(Math.random() *6 )+1;
+// const play1dice = "images/dice" + play1 +".png";
+const play1dice = `images/dice${play1}.png`
+document.getElementById('check1').setAttribute('src',play1dice)
+
+
+// Dice 2
+const play2 =Math.floor(Math.random() * 6)+1;
+const play2dice = `images/dice${play2}.png`
+document.getElementById('check2').setAttribute('src',play2dice)
+
+
+if(play1 >play2)
+{
+    document.querySelector('h1').innerHTML="Player 1 Wonn!!";
+}
+else if(play1 < play2)
+{
+    document.querySelector('h1').innerHTML="Player 2 Wonn!!"
+}
+else{
+    document.querySelector('h1').innerHTML ="Draww!!"
+    
+}
+
+}
+</script>
