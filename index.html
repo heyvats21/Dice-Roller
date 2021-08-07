@@ -34,7 +34,7 @@
 
         <audio src="http://cd.textfiles.com/hotgames/PROGRAMS/YACTC2/DICE.WAV"></audio>
         <div class="btn">
-         <button onclick="ludogame()"> Booom</button>
+         <button onclick="ludogame()" onmousedown="sound.play()"> <h3> Booom</h3></button>
         </div>
     </div>
     
@@ -48,6 +48,10 @@
 // {                we will use fatarrow function
 
 // }
+    //*************************************** sound of dice
+    var sound=new Audio();
+    sound.src="Dice.wav";
+ 
 
 ludogame=()=>{
     
