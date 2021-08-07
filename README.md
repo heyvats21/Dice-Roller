@@ -2,7 +2,7 @@
 
 Project made with the help of HTML, CSS,JS 
 
-Click on BOOM to see the magic
+Click on BOOM to listen the audio of dice roll.
 
 
 
