@@ -34,7 +34,7 @@
 
         <audio src="http://cd.textfiles.com/hotgames/PROGRAMS/YACTC2/DICE.WAV"></audio>
         <div class="btn">
-         <button onclick="ludogame()" onmousedown="sound.play()"> <h3> Booom</h3></button>
+         <button onclick="ludogame()" onmousedown="sound.play()" ><h3> Booom</h3></button>
         </div>
     </div>
     
@@ -43,11 +43,6 @@
 </html>
 
 <script >
- 
-// function ludogame()
-// {                we will use fatarrow function
-
-// }
     //*************************************** sound of dice
     var sound=new Audio();
     sound.src="Dice.wav";
@@ -75,6 +70,8 @@ document.getElementById('check2').setAttribute('src',play2dice)
 if(play1 >play2)
 {
     document.querySelector('h1').innerHTML="Player 1 Wonn!!";
+    // var party= new Audio();
+    // party.src="party.wav";
 }
 else if(play1 < play2)
 {
